@@ -25,8 +25,8 @@ app.controller('baseController' ,function($scope){
 		if($event.target.checked){//如果是被选中,则增加到数组
 			$scope.selectIds.push( id);			
 		}else{
-			var idx = $scope.selectIds.indexOf(id);
-            $scope.selectIds.splice(idx, 1);//删除 
+			var index = $scope.selectIds.indexOf(id);
+            $scope.selectIds.splice(index, 1);//删除
 		}
 	}
 

@@ -1,5 +1,6 @@
 package com.pinyougou.sellergoods.service.impl;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -77,8 +78,11 @@ public class BrandServiceImpl implements BrandService {
      */
     @Override
     public void delete(Long[] ids) {
-        for (Long id : ids) {
-            brandMapper.deleteByPrimaryKey(id);
+        if (ids != null && ids.length > 0) {
+            TbBrandExample example = new TbBrandExample();
+            Criteria criteria = example.createCriteria();
+            criteria.andIdIn(Arrays.asList(ids));
+            brandMapper.deleteByExample(example);
         }
     }
 

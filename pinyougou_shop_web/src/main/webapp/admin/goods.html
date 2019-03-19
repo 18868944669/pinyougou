@@ -30,7 +30,7 @@
 
 </head>
 
-<body class="hold-transition skin-red sidebar-mini" ng-app="pinyougou" ng-controller="goodsController" ng-init="findItemCatList();findOne()">
+<body class="hold-transition skin-red sidebar-mini" ng-app="pinyougou" ng-controller="goodsController" ng-init="findItemCatList()">
 <!-- .box-body -->
 
 <div class="box-header with-border">
@@ -46,7 +46,7 @@
         <div class="pull-left">
             <div class="form-group form-inline">
                 <div class="btn-group">
-                    <button type="button" class="btn btn-default" title="新建"><i class="fa fa-file-o"></i> 新建</button>
+                    <a href="goods_edit.html" class="btn btn-default" title="新建"><i class="fa fa-file-o"></i> 新建</a>
                     <button type="button" class="btn btn-default" title="删除"><i class="fa fa-trash-o"></i> 删除</button>
                     <button type="button" class="btn btn-default" title="提交审核"><i class="fa fa-check"></i> 提交审核</button>
                     <button type="button" class="btn btn-default" title="屏蔽" onclick='confirm("你确认要屏蔽吗？")'><i
@@ -62,10 +62,10 @@
             <div class="has-feedback">
                 状态：<select ng-model="searchEntity.auditStatus">
                 <option value="">全部</option>
-                <option value="0">未申请</option>
-                <option value="1">申请中</option>
-                <option value="2">审核通过</option>
-                <option value="3">已驳回</option>
+                <option value="0">未审核</option>
+                <option value="1">审核通过</option>
+                <option value="2">审核未通过</option>
+                <option value="3">已关闭</option>
             </select>
                 商品名称：<input ng-model="searchEntity.goodsName">
                 <button class="btn btn-default" ng-click="reloadList()">查询</button>

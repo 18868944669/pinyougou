@@ -23,8 +23,7 @@ app.controller('goodsController', function ($scope, $controller, $location, good
     }
 
     //查询实体
-    $scope.findOne = function (id) {
-
+    $scope.findOne = function () {
         var id = $location.search()['id'];//获取参数值
         if (id == null) {
             return;
@@ -32,7 +31,7 @@ app.controller('goodsController', function ($scope, $controller, $location, good
 
         goodsService.findOne(id).success(
             function (response) {
-                // $scope.entity = response;
+                $scope.entity = response;
                 //向富文本编辑器添加商品介绍
                 editor.html($scope.entity.goodsDesc.introduction);
 
@@ -249,17 +248,15 @@ app.controller('goodsController', function ($scope, $controller, $location, good
 
     //根据规格名称和选项名称返回是否被勾选
     $scope.checkAttributeValue = function (specName, optionName) {
-        var items = $scope.entity.goodsDesc.specificationItems;
-        var object = $scope.searchObjectByKey(items, 'attributeName', specName);
-        if (object == null) {
-            return false;
-        } else {
-            if (object.attributeValue.indexOf(optionName) >= 0) {
+
+         var items = $scope.entity.goodsDesc.specificationItems;
+         var object = $scope.searchObjectByKey(items, 'attributeName', specName);
+        if (object != null && object.attributeValue.indexOf(optionName) >= 0) {
                 return true;
-            } else {
-                return false;
-            }
+        } else{
+            return false;
         }
+
     }
 
 
@@ -276,6 +273,7 @@ app.controller('goodsController', function ($scope, $controller, $location, good
         serviceObject.success(
             function (response) {
                 if (response.success) {
+                    alert("保存成功");
                     location.href = "goods.html";//跳转到商品列表页
                 } else {
                     alert(response.message);

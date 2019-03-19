@@ -144,7 +144,7 @@ public class GoodsServiceImpl implements GoodsService {
         goodsDescMapper.updateByPrimaryKey(goods.getGoodsDesc());//保存商品扩展表
         //删除原有的 sku 列表数据
         TbItemExample example = new TbItemExample();
-        com.pinyougou.pojo.TbItemExample.Criteria criteria = example.createCriteria();
+        TbItemExample.Criteria criteria = example.createCriteria();
         criteria.andGoodsIdEqualTo(goods.getGoods().getId());
         itemMapper.deleteByExample(example);
         //添加新的 sku 列表数据
