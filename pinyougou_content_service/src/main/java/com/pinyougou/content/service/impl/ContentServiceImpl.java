@@ -7,7 +7,7 @@ import com.pinyougou.mapper.TbContentMapper;
 import com.pinyougou.pojo.TbContent;
 import com.pinyougou.pojo.TbContentExample;
 import com.pinyougou.pojo.TbContentExample.Criteria;
-import com.pinyougou.sellergoods.service.ContentService;
+import com.pinyougou.content.service.ContentService;
 import entity.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 

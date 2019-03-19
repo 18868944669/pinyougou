@@ -9,7 +9,7 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <dubbo:protocol name="dubbo" port="20882"></dubbo:protocol>
-	<dubbo:application name="pinyougou_sellergoods_service"/>
+	<dubbo:application name="pinyougou_content_service"/>
     <dubbo:registry address="zookeeper://192.168.25.130:2181"/>
     <dubbo:annotation package="com.pinyougou.content.service.impl" />
    

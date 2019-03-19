@@ -56,7 +56,7 @@
     <orderEntry type="library" name="Maven: javassist:javassist:3.11.0.GA" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.10" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
-    <orderEntry type="module" module-name="pinyougou_sellergoods_interface" />
+    <orderEntry type="module" module-name="pinyougou_content_interface" />
     <orderEntry type="module" module-name="pinyougou_pojo" />
     <orderEntry type="module" module-name="pinyougou_dao" />
     <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper:4.0.0" level="project" />
