@@ -108,7 +108,9 @@ app.controller('goodsController', function ($scope, $controller, $location, good
                 } else {
                     alert(response.message);
                 }
-            });
+            }).error(function () {
+            alert("上传错误");
+        });
     }
     //定义页面实体结构
     $scope.entity = {goods: {}, goodsDesc: {itemImages: [], specificationItems: []}};
