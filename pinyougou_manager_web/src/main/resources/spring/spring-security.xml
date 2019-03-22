@@ -18,7 +18,7 @@
     <!--
           配置具体的规则
           auto-config="true"	不用自己编写登录的页面，框架提供默认登录页面
-          use-expressions="false"	是否使用SPEL表达式（没学习过）
+          use-expressions="false"	是否使用SPEL表达式
       -->
     <security:http auto-config="true" use-expressions="false">
         <!-- 配置具体的拦截的规则 pattern="请求路径的规则" access="访问系统的人，必须有ROLE_USER的角色" -->
