@@ -96,7 +96,6 @@ app.controller('typeTemplateController', function ($scope, $controller, typeTemp
         });
     }
 
-    $scope.entity={customAttributeItems:[{"text":"内存大小"},{"text":"颜色"}]}
     //增加扩展属性行
     $scope.addTableRow = function () {
         $scope.entity.customAttributeItems.push({});

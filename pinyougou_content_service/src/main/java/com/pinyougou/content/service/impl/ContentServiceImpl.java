@@ -24,6 +24,8 @@ public class ContentServiceImpl implements ContentService {
 
     @Autowired
     private TbContentMapper contentMapper;
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     /**
      * 查询全部
@@ -126,8 +128,6 @@ public class ContentServiceImpl implements ContentService {
      * @return
      */
 
-    @Autowired
-    private RedisTemplate redisTemplate;
 
     @Override
     public List<TbContent> findByCategoryId(Long categoryId) {
