@@ -56,6 +56,29 @@ app.controller('goodsController', function ($scope, $controller, $location, good
         );
     }
 
+
+    //保存
+    $scope.save = function () {
+        //提取文本编辑器的值
+        $scope.entity.goodsDesc.introduction = editor.html();
+        var serviceObject;//服务层对象
+        if ($scope.entity.goods.id != null) {//如果有 ID
+            serviceObject = goodsService.update($scope.entity); //修改
+        } else {
+            serviceObject = goodsService.add($scope.entity);//增加
+        }
+        serviceObject.success(
+            function (response) {
+                if (response.success) {
+                    alert("保存成功");
+                    location.href = "goods.html";//跳转到商品列表页
+                } else {
+                    alert(response.message);
+                }
+            }
+        );
+    }
+
     //增加商品
     $scope.add = function () {
         $scope.entity.goodsDesc.introduction = editor.html();
@@ -262,27 +285,6 @@ app.controller('goodsController', function ($scope, $controller, $location, good
     }
 
 
-    //保存
-    $scope.save = function () {
-        //提取文本编辑器的值
-        $scope.entity.goodsDesc.introduction = editor.html();
-        var serviceObject;//服务层对象
-        if ($scope.entity.goods.id != null) {//如果有 ID
-            serviceObject = goodsService.update($scope.entity); //修改
-        } else {
-            serviceObject = goodsService.add($scope.entity);//增加
-        }
-        serviceObject.success(
-            function (response) {
-                if (response.success) {
-                    alert("保存成功");
-                    location.href = "goods.html";//跳转到商品列表页
-                } else {
-                    alert(response.message);
-                }
-            }
-        );
-    }
 
 
 

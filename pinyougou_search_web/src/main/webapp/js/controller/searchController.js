@@ -16,7 +16,7 @@ app.controller('searchController', function ($scope, $location, searchService) {
         'spec': {},
         'price': '',
         'pageNo': 1,
-        'pageSize': 40,
+        'pageSize': 20,
         'sortField': '',
         'sort': ''
     };
@@ -120,8 +120,8 @@ app.controller('searchController', function ($scope, $location, searchService) {
     }
 
     //加载查询字符串
-    $scope.loadkeywords=function(){
-        $scope.searchMap.keywords= $location.search()['keywords'];
+    $scope.loadkeywords = function () {
+        $scope.searchMap.keywords = $location.search()['keywords'];
         $scope.search();
     }
 
