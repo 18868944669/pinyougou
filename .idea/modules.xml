@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/itcast_sms/itcast_sms.iml" filepath="$PROJECT_DIR$/itcast_sms/itcast_sms.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_common/pinyougou_common.iml" filepath="$PROJECT_DIR$/pinyougou_common/pinyougou_common.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_content_interface/pinyougou_content_interface.iml" filepath="$PROJECT_DIR$/pinyougou_content_interface/pinyougou_content_interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_content_service/pinyougou_content_service.iml" filepath="$PROJECT_DIR$/pinyougou_content_service/pinyougou_content_service.iml" />
@@ -20,6 +21,9 @@
       <module fileurl="file://$PROJECT_DIR$/pinyougou_sellergoods_service/pinyougou_sellergoods_service.iml" filepath="$PROJECT_DIR$/pinyougou_sellergoods_service/pinyougou_sellergoods_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_shop_web/pinyougou_shop_web.iml" filepath="$PROJECT_DIR$/pinyougou_shop_web/pinyougou_shop_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_solr_util/pinyougou_solr_util.iml" filepath="$PROJECT_DIR$/pinyougou_solr_util/pinyougou_solr_util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou_user_interface/pinyougou_user_interface.iml" filepath="$PROJECT_DIR$/pinyougou_user_interface/pinyougou_user_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou_user_service/pinyougou_user_service.iml" filepath="$PROJECT_DIR$/pinyougou_user_service/pinyougou_user_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou_user_web/pinyougou_user_web.iml" filepath="$PROJECT_DIR$/pinyougou_user_web/pinyougou_user_web.iml" />
     </modules>
   </component>
 </project>
