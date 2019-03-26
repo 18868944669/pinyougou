@@ -241,7 +241,7 @@ app.controller('goodsController', function ($scope, $controller, $location, good
         }
     }
     //添加列值
-    addColumn = function (list, columnName, conlumnValues) {
+    addColumn = function (list, columnName, conlum  nValues) {
         //新的集合
         var newList = [];
         for (var i = 0; i < list.length; i++) {

@@ -1,30 +1,64 @@
-//ÉÌÆ·ÏêÏ¸Ò³£¨¿ØÖÆ²ã£©
-app.controller('itemController',function($scope){
-//ÊıÁ¿²Ù×÷
-$scope.addNum=function(x){
-$scope.num=$scope.num+x;
-if($scope.num<1){
-$scope.num=1;
-}
-}
+//å•†å“è¯¦ç»†é¡µï¼ˆæ§åˆ¶å±‚ï¼‰
+app.controller('itemController', function ($scope) {
+    //æ•°é‡æ“ä½œ
+    $scope.addNum = function (x) {
+        $scope.num = $scope.num + x;
+        if ($scope.num < 1) {
+            $scope.num = 1;
+        }
+    }
 
-$scope.specificationItems={};//¼ÇÂ¼ÓÃ»§Ñ¡ÔñµÄ¹æ¸ñ
-//ÓÃ»§Ñ¡Ôñ¹æ¸ñ
-$scope.selectSpecification=function(name,value){
-$scope.specificationItems[name]=value;
-}
-//ÅĞ¶ÏÄ³¹æ¸ñÑ¡ÏîÊÇ·ñ±»ÓÃ»§Ñ¡ÖĞ
-$scope.isSelected=function(name,value){
-if($scope.specificationItems[name]==value){
-return true;
-}else{
-return false;
-}
-}
+    $scope.specificationItems = {};//è®°å½•ç”¨æˆ·é€‰æ‹©çš„è§„æ ¼
+    //ç”¨æˆ·é€‰æ‹©è§„æ ¼
+    $scope.selectSpecification = function (name, value) {
+        $scope.specificationItems[name] = value;
+        searchSku();//è¯»å– sku
+    }
+    //åˆ¤æ–­æŸè§„æ ¼é€‰é¡¹æ˜¯å¦è¢«ç”¨æˆ·é€‰ä¸­
+    $scope.isSelected = function (name, value) {
+        if ($scope.specificationItems[name] == value) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    $scope.sku = {};
+    //åŠ è½½é»˜è®¤ SKU
+    $scope.loadSku = function () {
+        $scope.sku = skuList[0];
+        $scope.specificationItems = JSON.parse(JSON.stringify($scope.sku.spec));
+    }
 
-//¼ÓÔØÄ¬ÈÏ SKU
-$scope.loadSku=function(){
-$scope.sku=skuList[0];
-$scope.specificationItems= JSON.parse(JSON.stringify($scope.sku.spec)) ;
-}
+
+    //åŒ¹é…ä¸¤ä¸ªå¯¹è±¡
+    matchObject = function (map1, map2) {
+        for (var k in map1) {
+            if (map1[k] != map2[k]) {
+                return false;
+            }
+        }
+        for (var k in map2) {
+            if (map2[k] != map1[k]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    //æŸ¥è¯¢ SKU
+    searchSku = function () {
+        for (var i = 0; i < skuList.length; i++) {
+            if (matchObject(skuList[i].spec, $scope.specificationItems)) {
+                $scope.sku = skuList[i];
+                return;
+            }
+        }
+        $scope.sku = {id: 0, title: '--------', price: 0};//å¦‚æœæ²¡æœ‰åŒ¹é…çš„
+    }
+
+    //æ·»åŠ å•†å“åˆ°è´­ç‰©è½¦
+    $scope.addToCart=function(){
+        alert('skuid:'+$scope.sku.id);
+    }
+
 });

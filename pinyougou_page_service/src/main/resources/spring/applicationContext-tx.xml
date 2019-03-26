@@ -23,7 +23,7 @@
         </tx:attributes>
     </tx:advice>
     <aop:config>
-        <aop:pointcut id="pt1" expression="execution(* com.pinyougou.content.service.impl.*.*(..))"/>
+        <aop:pointcut id="pt1" expression="execution(* com.pinyougou.page.service.impl.*.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="pt1"/>
     </aop:config>
 
