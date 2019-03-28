@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/itcast_sms/itcast_sms.iml" filepath="$PROJECT_DIR$/itcast_sms/itcast_sms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou_cart_interface/pinyougou_cart_interface.iml" filepath="$PROJECT_DIR$/pinyougou_cart_interface/pinyougou_cart_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou_cart_service/pinyougou_cart_service.iml" filepath="$PROJECT_DIR$/pinyougou_cart_service/pinyougou_cart_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou_cart_web/pinyougou_cart_web.iml" filepath="$PROJECT_DIR$/pinyougou_cart_web/pinyougou_cart_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_common/pinyougou_common.iml" filepath="$PROJECT_DIR$/pinyougou_common/pinyougou_common.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_content_interface/pinyougou_content_interface.iml" filepath="$PROJECT_DIR$/pinyougou_content_interface/pinyougou_content_interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_content_service/pinyougou_content_service.iml" filepath="$PROJECT_DIR$/pinyougou_content_service/pinyougou_content_service.iml" />

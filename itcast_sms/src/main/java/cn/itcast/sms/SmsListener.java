@@ -10,6 +10,7 @@ import java.util.Map;
 
 /**
  * 消息监听类
+ *
  * @author Administrator
  */
 @Component
@@ -17,14 +18,14 @@ public class SmsListener {
     @Autowired
     private SmsUtil smsUtil;
 
-    @JmsListener(destination="sms")
-    public void sendSms(Map<String,String> map){
+    @JmsListener(destination = "sms")
+    public void sendSms(Map<String, String> map) {
         try {
             SendSmsResponse response = smsUtil.sendSms(
                     map.get("mobile"),
                     map.get("template_code"),
                     map.get("sign_name"),
-                    map.get("param") );
+                    map.get("param"));
             System.out.println("Code=" + response.getCode());
             System.out.println("Message=" + response.getMessage());
             System.out.println("RequestId=" + response.getRequestId());

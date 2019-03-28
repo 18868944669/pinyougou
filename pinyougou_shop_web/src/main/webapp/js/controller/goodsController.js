@@ -241,7 +241,7 @@ app.controller('goodsController', function ($scope, $controller, $location, good
         }
     }
     //添加列值
-    addColumn = function (list, columnName, conlum  nValues) {
+    addColumn = function (list, columnName, conlumnValues) {
         //新的集合
         var newList = [];
         for (var i = 0; i < list.length; i++) {
@@ -274,18 +274,15 @@ app.controller('goodsController', function ($scope, $controller, $location, good
     //根据规格名称和选项名称返回是否被勾选
     $scope.checkAttributeValue = function (specName, optionName) {
 
-         var items = $scope.entity.goodsDesc.specificationItems;
-         var object = $scope.searchObjectByKey(items, 'attributeName', specName);
+        var items = $scope.entity.goodsDesc.specificationItems;
+        var object = $scope.searchObjectByKey(items, 'attributeName', specName);
         if (object != null && object.attributeValue.indexOf(optionName) >= 0) {
-                return true;
-        } else{
+            return true;
+        } else {
             return false;
         }
 
     }
-
-
-
 
 
 });
