@@ -11,10 +11,14 @@
       <module fileurl="file://$PROJECT_DIR$/pinyougou_content_service/pinyougou_content_service.iml" filepath="$PROJECT_DIR$/pinyougou_content_service/pinyougou_content_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_dao/pinyougou_dao.iml" filepath="$PROJECT_DIR$/pinyougou_dao/pinyougou_dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_manager_web/pinyougou_manager_web.iml" filepath="$PROJECT_DIR$/pinyougou_manager_web/pinyougou_manager_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou_order_interface/pinyougou_order_interface.iml" filepath="$PROJECT_DIR$/pinyougou_order_interface/pinyougou_order_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou_order_service/pinyougou_order_service.iml" filepath="$PROJECT_DIR$/pinyougou_order_service/pinyougou_order_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_page_interface/pinyougou_page_interface.iml" filepath="$PROJECT_DIR$/pinyougou_page_interface/pinyougou_page_interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_page_service/pinyougou_page_service.iml" filepath="$PROJECT_DIR$/pinyougou_page_service/pinyougou_page_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_page_web/pinyougou_page_web.iml" filepath="$PROJECT_DIR$/pinyougou_page_web/pinyougou_page_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_parent.iml" filepath="$PROJECT_DIR$/pinyougou_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou_pay_interface/pinyougou_pay_interface.iml" filepath="$PROJECT_DIR$/pinyougou_pay_interface/pinyougou_pay_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou_pay_service/pinyougou_pay_service.iml" filepath="$PROJECT_DIR$/pinyougou_pay_service/pinyougou_pay_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_pojo/pinyougou_pojo.iml" filepath="$PROJECT_DIR$/pinyougou_pojo/pinyougou_pojo.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_portal_web/pinyougou_portal_web.iml" filepath="$PROJECT_DIR$/pinyougou_portal_web/pinyougou_portal_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_search_interface/pinyougou_search_interface.iml" filepath="$PROJECT_DIR$/pinyougou_search_interface/pinyougou_search_interface.iml" />
