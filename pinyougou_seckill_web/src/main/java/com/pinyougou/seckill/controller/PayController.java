@@ -65,8 +65,7 @@ public class PayController {
             }
             if (map.get("trade_state").equals("SUCCESS")) {//如果成功
                 result = new Result(true, "支付成功");
-                seckillOrderService.saveOrderFromRedisToDb(userId,
-                        Long.valueOf(out_trade_no), map.get("transaction_id"));
+                seckillOrderService.saveOrderFromRedisToDb(userId, Long.valueOf(out_trade_no), map.get("transaction_id"));
                 break;
             }
             try {
@@ -74,7 +73,7 @@ public class PayController {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            x++;//设置超时时间为 5 分钟
+            x++;//设置超时时间为 1 分钟
             if (x > 20) {
                 result = new Result(false, "二维码超时");
                 //1.调用微信的关闭订单接口

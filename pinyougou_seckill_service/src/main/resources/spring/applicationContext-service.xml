@@ -14,7 +14,7 @@
     <dubbo:annotation package="com.pinyougou.seckill.service.impl" />
 	<bean id="idWorker" class="util.IdWorker">
 		<!-- 进程 ID -->
-		<constructor-arg index="0" value="0"></constructor-arg>
+		<constructor-arg index="0" value="1"></constructor-arg>
 		<!-- 数据中心 ID -->
 		<constructor-arg index="1" value="0"></constructor-arg>
 	</bean>

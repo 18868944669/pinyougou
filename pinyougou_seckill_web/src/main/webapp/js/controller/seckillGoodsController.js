@@ -1,5 +1,5 @@
 //控制层
-app.controller('seckillGoodsController', function ($scope, $location, seckillGoodsService) {
+app.controller('seckillGoodsController', function ($scope, $location, $interval,seckillGoodsService) {
     //读取列表数据绑定到表单中
     $scope.findList = function () {
         seckillGoodsService.findList().success(
@@ -17,8 +17,8 @@ app.controller('seckillGoodsController', function ($scope, $location, seckillGoo
                 //总秒数
                 allsecond = Math.floor((new Date($scope.entity.endTime).getTime() - (new Date().getTime())) / 1000);
                 time = $interval(function () {
-                    if (second > 0) {
-                        second = second - 1;
+                    if (allsecond > 0) {
+                        allsecond = allsecond - 1;
                         $scope.timeString = convertTimeString(allsecond);//转换时间字符串
                     } else {
                         $interval.cancel(time);

@@ -32,7 +32,7 @@ public class SolrUtil {
         List<TbItem> itemList = itemMapper.selectByExample(example);
         System.out.println("===商品列表===");
         for (TbItem item : itemList) {
-            Map specMap = JSON.parseObject(item.getSpec());//将 spec 字段中的 json 字符串转换为 map
+            Map specMap = JSON.parseObject(item.getSpec(),Map.class);//将 spec 字段中的 json 字符串转换为 map
             item.setSpecMap(specMap);//给带注解的字段赋值
 
             System.out.println(item.getTitle());
