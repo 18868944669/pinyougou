@@ -1,5 +1,5 @@
 //商品详细页（控制层）
-app.controller('itemController', function ($scope) {
+app.controller('itemController', function ($scope,$http) {
     //数量操作
     $scope.addNum = function (x) {
         $scope.num = $scope.num + x;
