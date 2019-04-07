@@ -34,6 +34,7 @@
         <module name="pinyougou_sellergoods_service" />
         <module name="pinyougou_shop_web" />
         <module name="pinyougou_solr_util" />
+        <module name="pinyougou_tast_demo" />
         <module name="pinyougou_user_interface" />
         <module name="pinyougou_user_service" />
         <module name="pinyougou_user_web" />
@@ -69,6 +70,7 @@
       <module name="pinyougou_sellergoods_service" target="1.8" />
       <module name="pinyougou_shop_web" target="1.8" />
       <module name="pinyougou_solr_util" target="1.8" />
+      <module name="pinyougou_tast_demo" target="1.8" />
       <module name="pinyougou_user_interface" target="1.8" />
       <module name="pinyougou_user_service" target="1.8" />
       <module name="pinyougou_user_web" target="1.8" />

@@ -1,6 +1,7 @@
 package com.pinyougou.sellergoods.service.impl;
 
 import java.util.List;
+import java.util.Set;
 
 import entity.Result;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -127,9 +128,13 @@ public class ItemCatServiceImpl implements ItemCatService {
         Criteria criteria = example.createCriteria();
         criteria.andParentIdEqualTo(parentId);
         //每次执行查询的时候，一次性读取缓存进行存储 (因为每次增删改都要执行此方法)
-        List<TbItemCat> itemCatList = findAll();
-        for (TbItemCat itemCat : itemCatList) {
-            redisTemplate.boundHashOps("itemCat").put(itemCat.getName(), itemCat.getTypeId());
+
+        Set set = redisTemplate.boundHashOps("itemCat").keys();
+        if (set ==null ||set.size()<=0){
+            List<TbItemCat> itemCatList = findAll();
+            for (TbItemCat itemCat : itemCatList) {
+                redisTemplate.boundHashOps("itemCat").put(itemCat.getName(), itemCat.getTypeId());
+            }
         }
 
         return itemCatMapper.selectByExample(example);

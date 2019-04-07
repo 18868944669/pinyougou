@@ -31,6 +31,7 @@
       <module fileurl="file://$PROJECT_DIR$/pinyougou_sellergoods_service/pinyougou_sellergoods_service.iml" filepath="$PROJECT_DIR$/pinyougou_sellergoods_service/pinyougou_sellergoods_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_shop_web/pinyougou_shop_web.iml" filepath="$PROJECT_DIR$/pinyougou_shop_web/pinyougou_shop_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_solr_util/pinyougou_solr_util.iml" filepath="$PROJECT_DIR$/pinyougou_solr_util/pinyougou_solr_util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinyougou_tast_demo/pinyougou_tast_demo.iml" filepath="$PROJECT_DIR$/pinyougou_tast_demo/pinyougou_tast_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_user_interface/pinyougou_user_interface.iml" filepath="$PROJECT_DIR$/pinyougou_user_interface/pinyougou_user_interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_user_service/pinyougou_user_service.iml" filepath="$PROJECT_DIR$/pinyougou_user_service/pinyougou_user_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinyougou_user_web/pinyougou_user_web.iml" filepath="$PROJECT_DIR$/pinyougou_user_web/pinyougou_user_web.iml" />

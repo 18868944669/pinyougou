@@ -155,7 +155,7 @@ public class GoodsController {
         try {
             goodsService.updateStatus(ids, status);
             //按照 SPU ID 查询 SKU 列表(状态为 1)
-            if (status.equals("1")) {//审核通过
+            if ("1".equals(status)) {//审核通过
                 List<TbItem> itemList = goodsService.findItemListByGoodsIdandStatus(ids, status);
                 //调用搜索接口实现数据批量导入
                 if (itemList.size() > 0) {
