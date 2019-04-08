@@ -21,6 +21,7 @@ import entity.PageResult;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
 
 import javax.jms.*;
 
@@ -71,6 +72,7 @@ public class UserServiceImpl implements UserService {
 
         user.setCreated(new Date());//创建日期
         user.setUpdated(new Date());//修改
+        user.setSourceType("1");
         user.setPassword(DigestUtils.md5Hex(user.getPassword()));//对密码加密
         userMapper.insert(user);
     }
@@ -175,7 +177,7 @@ public class UserServiceImpl implements UserService {
         //存入缓存
         redisTemplate.boundHashOps("smscode").put(phone, code);
         //发送到 activeMQ
-        /*jmsTemplate.send(smsDestination, new MessageCreator() {
+        jmsTemplate.send(smsDestination, new MessageCreator() {
             @Override
             public Message createMessage(Session session) throws JMSException {
                 MapMessage mapMessage = session.createMapMessage();
@@ -183,11 +185,11 @@ public class UserServiceImpl implements UserService {
                 mapMessage.setString("template_code", template_code);//模板编号
                 mapMessage.setString("sign_name", sign_name);//签名
                 Map m = new HashMap<>();
-                m.put("number", code);
+                m.put("code", code);
                 mapMessage.setString("param", JSON.toJSONString(m));//参数
                 return mapMessage;
             }
-        });*/
+        });
     }
 
     /**

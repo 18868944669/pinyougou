@@ -22,7 +22,7 @@ import util.PhoneFormatCheckUtils;
 @RequestMapping("/user")
 public class UserController {
 
-    @Reference
+    @Reference(timeout = 5000)
     private UserService userService;
 
     /**
