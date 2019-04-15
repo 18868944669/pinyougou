@@ -19,6 +19,7 @@
     <file type="web" url="file://$PROJECT_DIR$/pinyougou_tast_demo" />
     <file type="web" url="file://$PROJECT_DIR$/pinyougou_user_service" />
     <file type="web" url="file://$PROJECT_DIR$/pinyougou_user_web" />
+    <file type="web" url="file://$PROJECT_DIR$/../Springmvc_demo" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">

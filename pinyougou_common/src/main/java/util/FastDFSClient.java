@@ -26,8 +26,7 @@ public class FastDFSClient {
         trackerServer = trackerClient.getConnection();
         //声明存储服务器
         storageServer = null;
-        //获取存储服务器的客户端对象
-        storageClient = new StorageClient1(trackerServer, storageServer);
+        //获取存储服务器的客户端对象        storageClient = new StorageClient1(trackerServer, storageServer);
     }
 
     /**

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Springmvc_demo:war">
+    <output-path>$PROJECT_DIR$/../Springmvc_demo/target</output-path>
+    <root id="archive" name="Springmvc_demo-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Springmvc_demo:war exploded" />
+    </root>
+  </artifact>
+</component>

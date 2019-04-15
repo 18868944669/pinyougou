@@ -53,6 +53,7 @@ public class CartController {
     }
 
     @RequestMapping("/addGoodsToCartList")
+    //            同意跨域请求的地址                  支持操作cookie
     @CrossOrigin(origins = "http://localhost:9105", allowCredentials = "true")
     public Result addGoodsToCartList(Long itemId, Integer num) {
 
